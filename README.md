@@ -12,6 +12,9 @@ city from the following list:
     2. New York City
     3. Washington
 
+### Created by
+Rebecca Doumouras
+
 ### Files used
 bikeshare.py
 chicago.csv       #ignored for version control
