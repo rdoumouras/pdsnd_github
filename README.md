@@ -23,6 +23,10 @@ washington.csv    #ignored for version control
 readme            #ignored for version control
                   # - readme for submission of py project
 
+### How to run
+python bikeshare.py
+(works with python 3.9.7)
+
 ### Credits
 Udacity course material
 
