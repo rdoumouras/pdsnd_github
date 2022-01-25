@@ -16,7 +16,7 @@ city from the following list:
 Rebecca Doumouras
 
 ### Files used
-bikeshare.py
+bikeshare.py      #program file see below for how to run
 chicago.csv       #ignored for version control
 new_york_city.csv #ignored for verison control
 washington.csv    #ignored for version control
