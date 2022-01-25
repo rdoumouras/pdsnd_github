@@ -21,7 +21,7 @@ chicago.csv       #ignored for version control
 new_york_city.csv #ignored for verison control
 washington.csv    #ignored for version control
 readme            #ignored for version control
-                  # - readme for submission of py project
+                  # - readme only used for submission of py project
 
 ### How to run
 python bikeshare.py
