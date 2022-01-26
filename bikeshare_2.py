@@ -371,11 +371,14 @@ def filter_options(city_name):
     filter_month, filter_day = False, False 
     
     filter_options_text = ''
+    # Print options header
     print('-'*40 + '\nWhich filter would you like to apply to the '
           + '{} data?'.format(city_name.title()))
+    # Iterate through filter_options list and format ready to print
     for index, options in enumerate(filter_options):
         filter_options_text = filter_options_text + "\n {}. {}".format(
-            index + 1, options)   
+            index + 1, options)
+    # Print filter_options_text for user to pick from
     print('Available Options:\n' + '-'*18 + '{}'.format(filter_options_text))
     reloop = True
 
