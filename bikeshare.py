@@ -563,7 +563,7 @@ def general_info(df, city_name):
     start_time = time.time()
     
     total_records = df['End Time'].count()
-    print('Total Trips in filtered list:    {}'.format(
+    print('Total Trips in filtered list:    {:,}'.format(
         df['End Time'].count()))
 
     print("\nCalculation of General Information took %s seconds." % (
@@ -588,13 +588,14 @@ def general_info(df, city_name):
         display = True
         row_num = 5
         
-        print("Displaying row {} to row {} of {} rows of data".format(
+        print("Displaying row " +
+            "{:,} to row {:,} of {:,} rows of data".format(
             row_num - 4, row_num, total_records))
         print(df[0:5])
         message = ''
         while display == True:
             message = '\nDo you want display 5 more rows (y), 20 (m)ore '
-            message = message + 'rows, (a)ll remaining {}'.format(
+            message = message + 'rows, (a)ll remaining {:,}'.format(
                 total_records - row_num)
             message_add = 'rows, or (s)top displaying the data?'
             message_add = message_add + '\nSelecting to display all '
@@ -616,7 +617,7 @@ def general_info(df, city_name):
                     if row_num >= total_records:
                         row_num = total_records
                         display = False
-                    print("Displaying row {} to row {} of {} ".format(
+                    print("Displaying row {:,} to row {:,} of {:,} ".format(
                         start_row_num + 1, 
                         row_num, 
                         total_records) + 
@@ -628,7 +629,7 @@ def general_info(df, city_name):
                     if row_num >= total_records:
                         row_num = total_records
                         display = False
-                    print("Displaying row {} to row {} of {} ".format(
+                    print("Displaying row {:,} to row {:,} of {:,} ".format(
                         start_row_num + 1,
                         row_num,
                         total_records) +
