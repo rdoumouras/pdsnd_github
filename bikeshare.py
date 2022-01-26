@@ -565,10 +565,10 @@ def general_info(df, city_name):
     total_records = df['End Time'].count()
     print('Total Trips in filtered list:    {:,}'.format(
         df['End Time'].count()))
-
-    print("\nCalculation of General Information took %s seconds." % (
-        time.time() 
-        - start_time))
+    
+    seconds = time.time() - start_time
+    print("\nCalculation of General Information took {:,.4f} seconds.".format(
+        seconds))
 
     display = True
     while display == True:
@@ -703,9 +703,10 @@ def time_stats(df, month, day):
     print(
         f'{title: <22}{time_group.idxmax(): <12}{hour_trips: >10}'
     )
-
-    print("\nCalculation of Time Statistics took %s seconds." % (
-        time.time() - start_time))
+    
+    seconds = time.time() - start_time
+    print("\nCalculation of Time Statistics took {:,.4f} seconds.".format(
+        seconds))
 
 
 def station_stats(df):
@@ -749,9 +750,10 @@ def station_stats(df):
     print('\nMost Frequent Combination of Start Station and End Station:'
           + '\n{}\nTotal Trips:\t\t\t= {}'.format(max_trip_name.title(), 
                                       max_trip_records))
-
+    
+    seconds = time.time() - start_time
     print("\nCalculation of Most Popular Station and Trip Statistics took"
-          + " %s seconds." % (time.time() - start_time))
+          + " {:,.4f} seconds.".format(seconds))
     print('-'*40)
 
 
@@ -800,8 +802,9 @@ def trip_duration_stats(df):
               trip_duration_stats['50%'],
               trip_duration_stats['75%']) + ' minutes')
 
-    print("\nCalculation of Trip Travel Time Statistics took %s seconds."
-        % (time.time() - start_time))
+    seconds = time.time() - start_time
+    print("\nCalculation of Trip Travel Time Statistics took "
+        + "{:,.4f} seconds.".format(seconds))
     print('-'*40)
 
 
@@ -862,8 +865,9 @@ def user_stats(df, city_name):
         print('No Birth Year Information in {} data.'.format(
             city_name.title()))
 
-    print("\nCalculation of User Trip Statistics took %s seconds." 
-          % (time.time() - start_time))
+    seconds = time.time() - start_time
+    print("\nCalculation of User Trip Statistics took " +
+        "{:,.4f} seconds.".format(seconds))
     print('-'*40)
 
 
